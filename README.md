@@ -14,7 +14,7 @@ Usage
 Add following snippet to your project's POM:
 
     <properties>
-        <version.selenium>3.141.59-topicus1</version.selenium>
+        <version.selenium>4.0.0-topicus1</version.selenium>
     </properties>
 
     <dependencyManagement>

@@ -4,7 +4,7 @@
 
   <groupId>org.jboss.arquillian.selenium</groupId>
   <artifactId>selenium-bom</artifactId>
-  <version>3.141.59-topicus1</version>
+  <version>4.0.0-topicus1</version>
   <packaging>pom</packaging>
 
   <name>Arquillian Selenium Dependency Management</name>
@@ -34,7 +34,7 @@
   </developers>
 
   <properties>
-    <version.selenium>3.141.59</version.selenium>
+    <version.selenium>4.0.0</version.selenium>
     <bintray.releases.repo.url>https://api.bintray.com/maven/arquillian/Arquillian/arquillian-selenium-bom/
     </bintray.releases.repo.url>
     <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/
@@ -43,10 +43,20 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- Selenium Server -->
+      <!-- Selenium Grid -->
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-server</artifactId>
+        <artifactId>selenium-grid</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-session-map-redis</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-session-map-jdbc</artifactId>
         <version>${version.selenium}</version>
       </dependency>
 
@@ -59,6 +69,16 @@
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-http</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-json</artifactId>
         <version>${version.selenium}</version>
       </dependency>
       <dependency>
@@ -80,26 +100,6 @@
       <!-- Drivers -->
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-chrome-driver</artifactId>
-        <version>${version.selenium}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-firefox-driver</artifactId>
-        <version>${version.selenium}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-ie-driver</artifactId>
-        <version>${version.selenium}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-edge-driver</artifactId>
-        <version>${version.selenium}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-safari-driver</artifactId>
         <version>${version.selenium}</version>
       </dependency>
@@ -111,6 +111,56 @@
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-opera-driver</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-ie-driver</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-firefox-driver</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-firefox-xpi-driver</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-edge-driver</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-devtools-v95</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-devtools-v94</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-devtools-v93</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-devtools-v85</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-chromium-driver</artifactId>
+        <version>${version.selenium}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-chrome-driver</artifactId>
         <version>${version.selenium}</version>
       </dependency>
     </dependencies>
